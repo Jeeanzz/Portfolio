@@ -2256,6 +2256,38 @@ input, select, textarea {
 				background-image: url("../../images/istockphoto-1333448662-612x612.jpg");
 			}
 
+			.video-container {
+				width: 80%; /* La vidéo occupera 80% de la largeur de la page */
+				margin: 0 auto; /* Centre la vidéo horizontalement */
+				margin-bottom: 50px;
+				padding: 0; /* Supprime les éventuels espaces intérieurs */
+				max-height: 500px; /* Limite la hauteur si besoin */
+  				overflow: hidden; /* Empêche la vidéo de déborder */
+			  }
+
+			#about p {
+				margin-top: 70px;  /* Ajoute cet espace au-dessus du texte */
+				margin-left: 10%;  /* Centre le texte avec une marge à gauche */
+				margin-right: 10%; /* Centre le texte avec une marge à droite */
+			}
+			  
+			video {
+				width: 100%; /* La vidéo occupe toute la largeur du conteneur */
+				height: auto; /* Ajuste la hauteur pour respecter le ratio d'aspect */
+				display: block; /* S'assure que la vidéo est traitée comme un bloc (utile pour le centrage) */
+				object-fit: cover; /* Permet de bien cadrer la vidéo si le conteneur est plus petit que la vidéo */
+			  }
+
+			#contact {
+				width: 80%; /* Ajuste la largeur de la section */
+				margin: 50px auto; /* Centrer la section et ajouter de l'espace au-dessus et en dessous */
+				padding: 20px; /* Ajoute de l'espace intérieur */
+				clear: both; /* S'assure qu'il n'y a pas de chevauchement avec d'autres éléments flottants */
+				background-color: #f5fafa; /* Couleur de fond (optionnel) */
+				border-radius: 5px; /* Bord arrondi pour un style plus propre */
+				overflow: hidden; /* Empêche le débordement des éléments en cas de trop petit écran */
+			  }
+			  
 			#main > section.two {
 				background-color: #f5fafa;
 			}
@@ -2635,4 +2667,24 @@ input, select, textarea {
 					margin-top: 0;
 				}
 
+		/* === Styles pour les écrans plus petits (responsive) === */
+	@media (max-width: 960px) {
+		.video-container, #contact {
+	  		width: 100%; /* Pour les écrans plus petits, prends toute la largeur */
+	  		margin: 20px auto; /* Ajuste la marge pour ne pas être trop serré */
+		}
+  
+		#contact input, #contact textarea {
+	  		width: 100%; /* Assure-toi que les champs prennent toute la largeur de leur conteneur */
+		}
+  
+		.row {
+	  		display: block; /* Force les colonnes à s'empiler en mode bloc pour les petits écrans */
+		}
+
+		#contact {
+			padding: 20px; /* Ajuste le padding pour les petits écrans */
+		}	
+  
 	}
+}
